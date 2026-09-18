@@ -1,0 +1,291 @@
+"""
+Algorithm 3: 앙상블 (Ensemble)
+
+여러 알고리즘의 결과를 결합하여 번호 생성
+
+2026-01-08 03:20:00 EST - 초기 생성
+"""
+
+import random
+from typing import List, Dict, Optional, Any
+from collections import Counter
+
+import pandas as pd
+
+from app.algorithms.base import LottoAlgorithm
+
+
+class EnsembleAlgorithm(LottoAlgorithm):
+    """
+    앙상블 알고리즘
+    
+    빈도 기반, 핫/콜드, 랜덤을 조합하여
+    가장 균형 잡힌 번호 세트 생성
+    """
+    
+    def __init__(self):
+        super().__init__(
+            algorithm_id=3,
+            name="앙상블 (Ensemble)",
+            description="여러 알고리즘의 결과를 결합하여 균형 잡힌 번호를 생성합니다.",
+            cost_per_set=2
+        )
+    
+    def generate_numbers(
+        self,
+        historical_data: Optional[pd.DataFrame],
+        n_sets: int = 5,
+        exclude_numbers: Optional[List[int]] = None,
+        include_numbers: Optional[List[int]] = None,
+        **kwargs
+    ) -> List[List[int]]:
+        """
+        앙상블 번호 생성
+        
+        Args:
+            historical_data: 과거 당첨번호 DataFrame
+            n_sets: 생성할 세트 수
+            exclude_numbers: 제외할 번호
+            include_numbers: 포함할 번호
+            **kwargs:
+                - recent_draws: 최근 N회차만 사용 (기본: 50)
+                
+        Returns:
+            List[List[int]]: 번호 세트
+        """
+        # 파라미터 검증
+        valid, error_msg = self.validate_parameters(n_sets, exclude_numbers, include_numbers)
+        if not valid:
+            raise ValueError(error_msg)
+        
+        # 최근 N회차만 사용
+        recent_draws = kwargs.get('recent_draws', 50)
+        if historical_data is not None and len(historical_data) > 0:
+            df = historical_data.tail(recent_draws)
+        else:
+            # 과거 데이터 없으면 순수 랜덤으로 폴백
+            return self._fallback_random(n_sets, exclude_numbers, include_numbers)
+        
+        # 사용 가능한 번호 풀
+        available_numbers = self.get_available_numbers(exclude_numbers, include_numbers)
+        
+        # 1. 빈도 계산
+        frequency = self._calculate_frequency(df)
+        
+        # 2. Hot/Cold 번호 추출
+        hot_numbers = self._get_hot_numbers(df, exclude_numbers, include_numbers)
+        cold_numbers = self._get_cold_numbers(df, exclude_numbers, include_numbers)
+        
+        # 3. 가중치 계산 (빈도 + Hot/Cold)
+        weights = self._calculate_ensemble_weights(
+            frequency, 
+            hot_numbers, 
+            cold_numbers, 
+            available_numbers
+        )
+        
+        results = []
+        
+        for _ in range(n_sets):
+            numbers = []
+            
+            # 포함 번호 먼저 추가
+            if include_numbers:
+                numbers.extend(include_numbers)
+            
+            # 나머지 번호 가중치 기반 선택
+            remaining_count = 6 - len(numbers)
+            remaining_pool = [n for n in available_numbers if n not in numbers]
+            
+            # 가중치 정규화
+            pool_weights = [weights.get(n, 1.0) for n in remaining_pool]
+            total_weight = sum(pool_weights)
+            
+            if total_weight > 0:
+                probabilities = [w / total_weight for w in pool_weights]
+                
+                # 가중치 기반 랜덤 선택
+                selected_indices = []
+                temp_pool = remaining_pool.copy()
+                temp_probs = probabilities.copy()
+                
+                for _ in range(remaining_count):
+                    if not temp_pool:
+                        break
+                    
+                    # 확률 기반 선택
+                    chosen_idx = random.choices(
+                        range(len(temp_pool)), 
+                        weights=temp_probs, 
+                        k=1
+                    )[0]
+                    
+                    numbers.append(temp_pool[chosen_idx])
+                    
+                    # 선택된 번호 제거
+                    temp_pool.pop(chosen_idx)
+                    temp_probs.pop(chosen_idx)
+                    
+                    # 확률 재정규화
+                    if temp_probs:
+                        total = sum(temp_probs)
+                        if total > 0:
+                            temp_probs = [p / total for p in temp_probs]
+            else:
+                # 가중치가 모두 0이면 랜덤 선택
+                selected = random.sample(remaining_pool, remaining_count)
+                numbers.extend(selected)
+            
+            # 정렬
+            results.append(sorted(numbers))
+        
+        return results
+    
+    def _calculate_frequency(self, df: pd.DataFrame) -> Dict[int, int]:
+        """번호별 출현 빈도 계산"""
+        all_numbers = []
+        
+        for idx, row in df.iterrows():
+            for i in range(1, 7):
+                all_numbers.append(row[f'num{i}'])
+        
+        frequency = Counter(all_numbers)
+        
+        # 1~45 모든 번호 포함
+        for num in range(1, 46):
+            if num not in frequency:
+                frequency[num] = 0
+        
+        return dict(frequency)
+    
+    def _get_hot_numbers(
+        self,
+        df: pd.DataFrame,
+        exclude: Optional[List[int]],
+        include: Optional[List[int]]
+    ) -> List[int]:
+        """Hot 번호 추출 (최근 자주 나온 번호)"""
+        all_numbers = []
+        
+        # 최근 20회차만 사용
+        recent_df = df.tail(20)
+        
+        for idx, row in recent_df.iterrows():
+            for i in range(1, 7):
+                all_numbers.append(row[f'num{i}'])
+        
+        frequency = Counter(all_numbers)
+        
+        # 제외/포함 필터링
+        if exclude:
+            frequency = {k: v for k, v in frequency.items() if k not in exclude}
+        if include:
+            frequency = {k: v for k, v in frequency.items() if k not in include}
+        
+        # 상위 15개 반환
+        hot = [num for num, count in frequency.most_common(15)]
+        return hot
+    
+    def _get_cold_numbers(
+        self,
+        df: pd.DataFrame,
+        exclude: Optional[List[int]],
+        include: Optional[List[int]]
+    ) -> List[int]:
+        """Cold 번호 추출 (오래 안 나온 번호)"""
+        all_numbers = []
+        
+        # 최근 50회차 사용
+        recent_df = df.tail(50)
+        
+        for idx, row in recent_df.iterrows():
+            for i in range(1, 7):
+                all_numbers.append(row[f'num{i}'])
+        
+        frequency = Counter(all_numbers)
+        all_nums = set(range(1, 46))
+        
+        # 제외/포함 필터링
+        if exclude:
+            all_nums -= set(exclude)
+        if include:
+            all_nums -= set(include)
+        
+        # 빈도가 낮은 번호
+        cold = sorted(all_nums, key=lambda x: frequency.get(x, 0))
+        
+        # 하위 15개 반환
+        return cold[:15]
+    
+    def _calculate_ensemble_weights(
+        self,
+        frequency: Dict[int, int],
+        hot_numbers: List[int],
+        cold_numbers: List[int],
+        available_numbers: List[int]
+    ) -> Dict[int, float]:
+        """앙상블 가중치 계산"""
+        weights = {}
+        
+        # 빈도 정규화 (0~1)
+        max_freq = max(frequency.values()) if frequency else 1
+        
+        for num in available_numbers:
+            weight = 0.0
+            
+            # 1. 빈도 기반 가중치 (40%)
+            freq_weight = frequency.get(num, 0) / max_freq
+            weight += freq_weight * 0.4
+            
+            # 2. Hot 번호 가중치 (30%)
+            if num in hot_numbers:
+                hot_rank = hot_numbers.index(num)
+                hot_weight = 1.0 - (hot_rank / len(hot_numbers))
+                weight += hot_weight * 0.3
+            
+            # 3. Cold 번호 가중치 (20%)
+            if num in cold_numbers:
+                cold_rank = cold_numbers.index(num)
+                cold_weight = 1.0 - (cold_rank / len(cold_numbers))
+                weight += cold_weight * 0.2
+            
+            # 4. 랜덤 다양성 (10%)
+            weight += random.uniform(0, 0.1)
+            
+            weights[num] = weight
+        
+        return weights
+    
+    def _fallback_random(
+        self,
+        n_sets: int,
+        exclude_numbers: Optional[List[int]],
+        include_numbers: Optional[List[int]]
+    ) -> List[List[int]]:
+        """과거 데이터 없을 때 순수 랜덤으로 폴백"""
+        results = []
+        available_numbers = self.get_available_numbers(exclude_numbers, include_numbers)
+        
+        for _ in range(n_sets):
+            numbers = []
+            
+            if include_numbers:
+                numbers.extend(include_numbers)
+            
+            remaining_count = 6 - len(numbers)
+            selected = random.sample(available_numbers, remaining_count)
+            numbers.extend(selected)
+            
+            results.append(sorted(numbers))
+        
+        return results
+    
+    def get_default_parameters(self) -> Dict[str, Any]:
+        """기본 파라미터"""
+        return {
+            'n_sets': 5,
+            'exclude_numbers': None,
+            'include_numbers': None,
+            'recent_draws': 50
+        }
+

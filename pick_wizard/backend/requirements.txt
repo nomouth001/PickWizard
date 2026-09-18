@@ -1,0 +1,66 @@
+# ============================================
+# LuckyAI 645 Backend Dependencies
+# Python 3.13 호환 버전
+# 2026-01-04 업데이트
+# ============================================
+
+# === Core Framework ===
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
+python-dotenv>=1.0.0
+
+# === Database ===
+sqlalchemy>=2.0.40
+alembic>=1.14.0
+psycopg2-binary>=2.9.9  # PostgreSQL adapter (binary version)
+psycopg[binary]>=3.1.18  # PostgreSQL adapter v3
+asyncpg>=0.30.0
+
+# === Caching & Queue ===
+redis>=5.2.0
+celery>=5.4.0
+
+# === HTTP & Web Scraping ===
+aiohttp>=3.11.0
+beautifulsoup4>=4.12.0
+lxml>=5.3.0
+httpx>=0.28.0  # 034 OAuth: Google/Kakao/Naver token·userinfo 호출
+
+# === Data Processing ===
+pandas>=2.2.0
+numpy>=1.26.4
+scikit-learn>=1.6.0
+
+# === Logging & Monitoring ===
+loguru>=0.7.0
+
+# === Security / OAuth·JWT (034) ===
+# OAuth: httpx(위), PyJWT. Apple id_token 검증 확장 시 python-jose/cryptography 사용 가능
+python-jose[cryptography]>=3.3.0
+PyJWT>=2.0.0  # 034 OAuth JWT 발급·검증
+passlib[bcrypt]>=1.7.4
+python-multipart>=0.0.12
+
+# === Testing ===
+# 2026-01-08 06:35:00 EST - pytest-mock 추가
+# 2026-01-08 06:45:00 EST - mypy 추가
+pytest>=8.0.0
+pytest-asyncio>=0.24.0
+pytest-cov>=6.0.0
+pytest-mock>=3.11.0
+mypy>=1.8.0
+
+# === Utilities ===
+python-dateutil>=2.9.0
+pytz>=2024.1
+pyyaml>=6.0.0  # Pricing config 파일 파싱
+
+# === AI/LLM ===
+# 2026-01-18 EST - AI Selection 알고리즘 (Algorithm 8) 추가
+google-generativeai>=0.8.0  # Google Gemini API
+
+# === ML/AI (선택 사항 - 필요 시 주석 해제) ===
+# torch>=2.6.0
+# transformers>=4.40.0

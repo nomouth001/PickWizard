@@ -1,0 +1,408 @@
+{
+  "@@locale": "th",
+  "@@context": "PickWizard - Thai Language Pack",
+  
+  "appTitle": "PickWizard: ตัวช่วยเลือกเลขหวย",
+  "appSubtitle": "แอปช่วยเลือกเลขหวย",
+  
+  "disclaimerDialogTitle": "แจ้งให้ทราบ",
+  "disclaimerDialogMessage": "แอปนี้เป็นเครื่องมือช่วยจับสลากเลข สำหรับผู้ที่ต้องการเลือกหมายเลขในวิธีอื่นนอกจากตัวเลือกด่วนที่เครื่องเมื่อซื้อสลาก แอปไม่เพิ่มโอกาสถูกรางวัล กรุณาใช้เพื่อความบันเทิงเท่านั้น",
+  "confirm": "ตกลง",
+  "cancel": "ยกเลิก",
+  "close": "ปิด",
+  "save": "บันทึก",
+  "delete": "ลบ",
+  "deleteSavedNumberTitle": "ลบหมายเลขที่บันทึก",
+  "deleteSavedNumberMessage": "ลบชุดนี้ใช่หรือไม่?",
+  "offlineDrawCheckHint": "ตรวจผลรางวัลได้ที่ช่องทางทางการ",
+  "edit": "แก้ไข",
+  "view": "ดู",
+  "loading": "กำลังโหลด...",
+  "error": "ข้อผิดพลาด",
+  "success": "สำเร็จ",
+  "warning": "คำเตือน",
+  "info": "ข้อมูล",
+  
+  "home": "หน้าหลัก",
+  "homeTitle": "สร้างเลขหวย",
+  "generate": "สร้าง",
+  "generateNumbers": "สร้างเลข",
+  "history": "ประวัติ",
+  "myNumbers": "เลขของฉัน",
+  "settings": "ตั้งค่า",
+  "statistics": "สถิติ",
+  "statisticsComingSoon": "ฟีเจอร์สถิติเร็วๆ นี้",
+  
+  "latestDraw": "งวดล่าสุด",
+  "latestWinningNumbers": "เลขที่ถูกล่าสุด",
+  "drawNumber": "งวดที่ {number}",
+  "@drawNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "bonusNumber": "เลขเสริม",
+  "drawDate": "วันออกรางวัล",
+  
+  "selectAlgorithm": "เลือกอัลกอริทึม",
+  "algorithmSelection": "เลือกอัลกอริทึม",
+  "changeOptions": "เปลี่ยนตัวเลือก",
+  "numberOfSets": "จำนวนชุด",
+  "numberOfSetsCount": "{count} ชุด",
+  "@numberOfSetsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quickButton5": "5 ชุด",
+  "quickButton10": "10 ชุด",
+  "fiveSets": "5 ชุด",
+  "tenSets": "10 ชุด",
+  "directInput": "กำหนดเอง",
+  "enterNumberOfSets": "กรอกจำนวนชุดที่ต้องการสร้าง",
+  "range1To100": "1~100",
+  "rangeHint": "1~100",
+  "setsUnit": "ชุด",
+  "generateButton": "สร้างเลข",
+  "generating": "กำลังสร้าง...",
+  
+  "algorithm1Name": "เลือกด่วน (Quick Pick)",
+  "algorithm1Desc": "สุ่มเลือก 6 หมายเลขจาก 1–45 ยุติธรรมและไม่เอนเอียง",
+  "algorithm1DescDynamic": "สุ่มเลือก {count} หมายเลขจาก {min}–{max} ยุติธรรมและไม่เอนเอียง",
+  "@algorithm1DescDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm2Name": "ความถี่ขั้นสูง",
+  "algorithm2Desc": "วิเคราะห์ความถี่งวดก่อนเพื่อเลือกหมายเลข",
+  "algorithm3Name": "Deep Learning",
+  "algorithm3Desc": "เลือกหมายเลขจากรูปแบบที่ deep learning เรียนรู้",
+  "algorithm4Name": "วิเคราะห์รูปแบบ",
+  "algorithm4Desc": "วิเคราะห์รูปแบบทางสถิติ เช่น คู่/คี่ หมายเลขติดกัน",
+  "algorithm5Name": "เลือกแบบถ่วงน้ำหนัก",
+  "algorithm5Desc": "ใส่น้ำหนักความถี่ ความใหม่ โซน ความหลากหลาย",
+  "algorithm6Name": "ตามความถี่",
+  "algorithm6Desc": "เน้นหมายเลขที่ออกบ่อย",
+  "algorithm7Name": "เลขร้อน/เย็น",
+  "algorithm7Desc": "ผสมเลขร้อน (ออกล่าสุด) กับเลขเย็น (นานไม่ออก)",
+  "algorithm8Name": "เลือกด้วย AI",
+  "algorithm8Desc": "AI วิเคราะห์เลขที่ถูกรางวัลในอดีตและแนะนำหมายเลข",
+  
+  "free": "ฟรี",
+  "coinsPerSet": "{coins} เหรียญ",
+  "@coinsPerSet": {
+    "placeholders": {
+      "coins": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "generatedNumbers": "เลขที่สร้างแล้ว",
+  "generationResult": "ผลการสร้าง",
+  "generatedCount": "สร้างทั้งหมด {count} ชุด",
+  "@generatedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setsGenerated": "สร้างแล้ว {count} ชุด",
+  "@setsGenerated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setNumber": "ชุดที่ {number}",
+  "@setNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "saveToMyNumbers": "บันทึกไปที่เลขของฉัน",
+  "saveAsMyNumbers": "บันทึกเป็นเลขของฉัน",
+  "saveSetsMessage": "จะบันทึก {count} ชุดเลข",
+  "@saveSetsMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "numbersSaved": "บันทึก {count} ชุดแล้ว",
+  "@numbersSaved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveFailed": "บันทึกไม่สำเร็จ: {error}",
+  "@saveFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "memoOptional": "หมายเหตุ (ไม่บังคับ)",
+  "memoExample": "เช่น เลขซื้อรายสัปดาห์",
+  "share": "แชร์",
+  "generateAgain": "สร้างอีกครั้ง",
+  "backToHome": "กลับหน้าหลัก",
+  
+  "maxLimitTitle": "จำกัดจำนวนชุด",
+  "maxLimitMessage": "สร้างได้สูงสุด 100 ชุด",
+  "requirementTitle": "กรุณากรอก",
+  "requirementSelectAlgorithm": "กรุณาเลือกอัลกอริทึม",
+  "requirementSelectCount": "กรุณาเลือกหรือกรอกจำนวนชุด (1~100)",
+  "requirementSelectBoth": "กรุณาเลือกอัลกอริทึมและกรอกจำนวนชุด",
+  
+  "errorLoadAlgorithms": "โหลดอัลกอริทึมไม่สำเร็จ",
+  "errorLoadingData": "โหลดข้อมูลไม่สำเร็จ",
+  "errorFormat": "ข้อผิดพลาด: {error}",
+  "@errorFormat": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorOccurred": "เกิดข้อผิดพลาด",
+  "initializationError": "ข้อผิดพลาดในการเริ่มต้น",
+  "errorGenerateFailed": "สร้างเลขไม่สำเร็จ: {message}",
+  "@errorGenerateFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNetwork": "กรุณาตรวจสอบการเชื่อมต่อเครือข่าย",
+  "errorServer": "เกิดข้อผิดพลาดเซิร์ฟเวอร์",
+  "errorUnknown": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ",
+  
+  "language": "ภาษา",
+  "gameLabel": "เกม",
+  "selectGame": "เลือกเกม",
+  "gameLotto645": "ล็อตโต้ 6/45",
+  "gamePowerball": "พาวเวอร์บอล",
+  "gameMegaMillions": "เมกะมิลเลียนส์",
+  "gameWinForLife": "Win for Life",
+  "gameAnnuity720": "ลอตเตอรี่บำนาญ720+",
+  "@gameAnnuity720": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "annuity720GroupBadge": "Group {group}",
+  "@annuity720GroupBadge": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" }
+    }
+  },
+  "annuity720FullFormat": "Group {group}: {digits}",
+  "@annuity720FullFormat": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" },
+      "digits": { "type": "String" }
+    }
+  },
+  "serialFixedGroupLabel": "Fix Group",
+  "@serialFixedGroupLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialFixedGroupHint": "1–5, blank = random",
+  "@serialFixedGroupHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsLabel": "Exclude Groups",
+  "@serialExcludeGroupsLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsHint": "1–5, up to 4",
+  "@serialExcludeGroupsHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialGroupRange": "Group range: 1–5",
+  "@serialGroupRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialDigitRange": "Each digit: 0–9",
+  "@serialDigitRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "bonusBallLabel": "ลูกโบนัส",
+  "@bonusBallLabel": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNamePowerball": "พาวเวอร์บอล (ลูกแดง)",
+  "@bonusBallNamePowerball": {
+    "description": "MT(미검수)"
+  },
+  "gameTypeChangedClearNumbers": "เปลี่ยนเกมแล้ว หมายเลขที่รวม/ยกเว้นถูกรีเซ็ต",
+  "@gameTypeChangedClearNumbers": {
+    "description": "MT(미검수)"
+  },
+  "selectLanguage": "เลือกภาษา",
+  "languageChanged": "เปลี่ยนเป็น {language} แล้ว",
+  "@languageChanged": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageKorean": "한국어",
+  "languageEnglish": "English",
+  "languageChinese": "中文",
+  "languageVietnamese": "Tiếng Việt",
+  "languageThai": "ภาษาไทย",
+  "languageJapanese": "日本語",
+  "appNameOffline": "PickWizard: ตัวช่วยเลือกเลขหวย",
+  "includeNumbersLabel": "หมายเลขที่รวม",
+  "excludeNumbersLabel": "หมายเลขที่ไม่รวม",
+  "includeNumbersHint": "เช่น 1, 3, 7 (คั่นด้วยจุลภาคหรือเว้นวรรค สูงสุด 6)",
+  "mainNumberRange": "ช่วงหมายเลขหลัก: {min}~{max}",
+  "@mainNumberRange": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "includeNumbersHintDynamic": "เช่น 1, 3, 7 (จุลภาคหรือเว้นวรรค ช่วง {min}~{max} สูงสุด {maxCount})",
+  "@includeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxCount": { "type": "int" }
+    }
+  },
+  "excludeNumbersHintDynamic": "เช่น 2, 5, 10 (จุลภาคหรือเว้นวรรค ช่วง {min}~{max} สูงสุด {maxExclude})",
+  "@excludeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxExclude": { "type": "int" }
+    }
+  },
+  "excludeNumbersHint": "เช่น 2, 5, 10 (คั่นด้วยจุลภาคหรือเว้นวรรค สูงสุด 39)",
+  "mainNumbers": "หมายเลขหลัก",
+  "@mainNumbers": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallSection": "ลูกโบนัส ({name})",
+  "@bonusBallSection": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusNumbersLabel": "หมายเลข {name} ที่รวม",
+  "@includeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "excludeBonusNumbersLabel": "หมายเลข {name} ที่ยกเว้น",
+  "@excludeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusHint": "1~{max} สูงสุด 1",
+  "@includeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "excludeBonusHint": "1~{max} สูงสุด {limit}",
+  "@excludeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": {
+      "max": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "bonusBallNameMegaBall": "เมกะบอล (ลูกทอง)",
+  "@bonusBallNameMegaBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNameLuckyBall": "ลัคกี้บอล (ลูกเหลือง)",
+  "@bonusBallNameLuckyBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusNumberRange": "ช่วงหมายเลขโบนัส: 1~{max}",
+  "@bonusNumberRange": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "filterAll": "ทั้งหมด",
+  "@filterAll": {
+    "description": "MT(미검수)"
+  },
+  "numberOfSetsHint": "จำนวนชุดที่สร้าง (1~100)",
+  "checkIncludeExclude": "กรุณาตรวจสอบเงื่อนไขการรวม/ยกเว้น",
+  "copySetsCopied": "คัดลอกชุดที่ {start}~{end} ไปยังคลิปบอร์ดแล้ว",
+  "@copySetsCopied": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "copyBy5SetsSection": "คัดลอกทีละ 5 ชุด",
+  "copySetsRangeButton": "คัดลอกชุดที่ {start}~{end}",
+  "@copySetsRangeButton": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "algorithm9NameDisplay": "สุ่ม 10,000 ครั้ง เลือก 6 หมายเลข",
+  "algorithm9Desc": "สุ่ม 10,000 ครั้ง แล้วเลือก 6 หมายเลขที่ออกบ่อยที่สุดเป็นหนึ่งชุด",
+  "algorithm9DescDynamic": "สุ่ม 10,000 ครั้ง แล้วเลือก {count} หมายเลขที่ออกบ่อยที่สุดเป็นหนึ่งชุด",
+  "@algorithm9DescDynamic": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm1HelpOverview": "สร้างหมายเลขแบบสุ่มทั้งหมด ทุกหมายเลขมีโอกาสถูกเลือกเท่ากัน",
+  "algorithm1HelpHowItWorks": "เลือก 6 หมายเลขแบบสุ่มจาก 1 ถึง 45 ไม่พิจารณาสถิติหรือรูปแบบ แต่ละหมายเลขถูกเลือกแยกกัน",
+  "algorithm1HelpWhenToUse": "ใช้เมื่อต้องการพึ่งพาโชคโดยไม่มีกลยุทธ์พิเศษ ฟรีและสร้างหมายเลขได้เร็วที่สุด",
+  "algorithm9HelpOverview": "สุ่มจาก 1 ถึง 45 ทั้งหมด 10,000 ครั้ง แล้วนำ 6 หมายเลขที่ออกบ่อยที่สุดเป็นหนึ่งชุด เป็นการจำลองล้วนๆ ไม่ใช้ข้อมูลอดีต",
+  "algorithm9HelpHowItWorks": "1. ทำซ้ำ 10,000 ครั้ง: สุ่มเลือกหนึ่งหมายเลขจาก 1 ถึง 45\n2. นับว่าหมายเลขแต่ละตัวออกกี่ครั้ง\n3. เลือก 6 หมายเลขที่ออกบ่อยที่สุดเป็นหนึ่งชุด\n4. ถ้าเท่ากัน ให้หมายเลขที่น้อยกว่ามาก่อน",
+  "algorithm9HelpWhenToUse": "ใช้เมื่อเชื่อผลการสุ่มซ้ำมากกว่าสถิติหรือข้อมูลอดีต ฟรีและไม่ต้องตั้งค่าเพิ่ม",
+  "serialAlgorithm1Name": "ซีเรียลสุ่มอัตโนมัติ",
+  "serialAlgorithm1HelpHowItWorks": "สำหรับแต่ละหลักใน 6 หลัก จะสุ่มตัวเลขจาก 0 ถึง 9 โดยไม่ใช้สถิติหรือรูปแบบ และแต่ละหลักเลือกอิสระจากกัน",
+  "serialAlgorithm9Name": "แต่ละหลักสุ่ม 3,000 ครั้ง เลือกที่บ่อยสุด",
+  "serialAlgorithm9Desc": "ในแต่ละตำแหน่ง 6 หลัก สุ่ม 0–9 แบบสุ่ม 3,000 ครั้ง แล้วเลือกตัวเลขที่ออกบ่อยที่สุดในแต่ละหลัก",
+  "serialAlgorithm9HelpOverview": "สำหรับแต่ละหลักของ Annuity 720+ สุ่ม 0–9 แบบสุ่ม 3,000 ครั้ง แล้วเลือกตัวเลขที่ออกบ่อยที่สุดในหลักนั้น เป็นการจำลองล้วนๆ ไม่ใช้ข้อมูลผลรางวัลย้อนหลัง",
+  "serialAlgorithm9HelpHowItWorks": "1. ทำแต่ละหลักจากซ้ายไปขวา 6 หลักดังนี้\n2. ทำซ้ำ 3,000 ครั้ง: สุ่มเลือกหนึ่งหลักจาก 0 ถึง 9\n3. นับว่าหลักแต่ละตัวออกกี่ครั้ง แล้วเลือกหลักที่ออกบ่อยที่สุดในตำแหน่งนั้น\n4. ถ้าเท่ากัน ให้หลักที่น้อยกว่ามาก่อน\n5. เมื่อครบ 6 หลัก จะได้หนึ่งชุด",
+  "serialAlgorithm9HelpWhenToUse": "ใช้เมื่อต้องการแนวคิดแบบความถี่คล้าย Monte Carlo ของบอลพิค แต่ยังให้ความหมายของลำดับหลักแบบสายเลขหวยบำนาญ",
+  "unsupportedAlgorithm": "ไม่รองรับอัลกอริทึมนี้",
+  "includeSelectedLabel": "เลือกแล้ว {count} (สูงสุด {max})",
+  "@includeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "excludeSelectedLabel": "เลือกแล้ว {count} (สูงสุด {max})",
+  "@excludeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "myNumbersEmptyTitle": "ยังไม่มีหมายเลขที่บันทึก",
+  "myNumbersEmptyHint": "สร้างเลขแล้ว กด 'บันทึกเป็นเลขของฉัน' ในหน้าผลลัพธ์เพื่อบันทึกมาที่นี่",
+  "dbResetDialogTitle": "แจ้งเตือน",
+  "dbResetDialogMessage": "หมายเลขที่บันทึกไว้ถูกรีเซ็ตเนื่องจากอัปเดตแอป"
+}

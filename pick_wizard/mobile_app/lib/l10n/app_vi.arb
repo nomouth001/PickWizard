@@ -1,0 +1,408 @@
+{
+  "@@locale": "vi",
+  "@@context": "PickWizard - Vietnamese Language Pack",
+  
+  "appTitle": "PickWizard: Trợ lý chọn số xổ số",
+  "appSubtitle": "Ứng dụng hỗ trợ chọn số xổ số",
+  
+  "disclaimerDialogTitle": "Thông báo",
+  "disclaimerDialogMessage": "Ứng dụng này là công cụ hỗ trợ quay số dành cho những ai muốn chọn số xổ số theo cách khác ngoài chọn nhanh tại máy khi mua vé. Ứng dụng không làm tăng xác suất trúng thưởng. Chỉ nên sử dụng với mục đích giải trí.",
+  "confirm": "Xác nhận",
+  "cancel": "Hủy",
+  "close": "Đóng",
+  "save": "Lưu",
+  "delete": "Xóa",
+  "deleteSavedNumberTitle": "Xóa số đã lưu",
+  "deleteSavedNumberMessage": "Bạn có chắc xóa bản ghi này?",
+  "offlineDrawCheckHint": "Tra cứu trúng thưởng tại kênh chính thức.",
+  "edit": "Sửa",
+  "view": "Xem",
+  "loading": "Đang tải...",
+  "error": "Lỗi",
+  "success": "Thành công",
+  "warning": "Cảnh báo",
+  "info": "Thông tin",
+  
+  "home": "Trang chủ",
+  "homeTitle": "Tạo số xổ số",
+  "generate": "Tạo",
+  "generateNumbers": "Tạo số",
+  "history": "Lịch sử",
+  "myNumbers": "Số của tôi",
+  "settings": "Cài đặt",
+  "statistics": "Thống kê",
+  "statisticsComingSoon": "Tính năng thống kê sắp ra mắt",
+  
+  "latestDraw": "Kỳ mới nhất",
+  "latestWinningNumbers": "Số trúng thưởng mới nhất",
+  "drawNumber": "Kỳ #{number}",
+  "@drawNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "bonusNumber": "Số đặc biệt",
+  "drawDate": "Ngày quay",
+  
+  "selectAlgorithm": "Chọn thuật toán",
+  "algorithmSelection": "Chọn thuật toán",
+  "changeOptions": "Đổi tùy chọn",
+  "numberOfSets": "Số bộ tạo",
+  "numberOfSetsCount": "{count} bộ",
+  "@numberOfSetsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quickButton5": "5 bộ",
+  "quickButton10": "10 bộ",
+  "fiveSets": "5 bộ",
+  "tenSets": "10 bộ",
+  "directInput": "Tùy chỉnh",
+  "enterNumberOfSets": "Nhập số bộ cần tạo",
+  "range1To100": "1~100",
+  "rangeHint": "1~100",
+  "setsUnit": "bộ",
+  "generateButton": "Tạo số",
+  "generating": "Đang tạo...",
+  
+  "algorithm1Name": "Chọn nhanh (Quick Pick)",
+  "algorithm1Desc": "Chọn ngẫu nhiên 6 số từ 1–45. Công bằng và không thiên lệch.",
+  "algorithm1DescDynamic": "Chọn ngẫu nhiên {count} số từ {min}–{max}. Công bằng và không thiên lệch.",
+  "@algorithm1DescDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm2Name": "Tần suất nâng cao",
+  "algorithm2Desc": "Phân tích tần suất quay trước đây để chọn số.",
+  "algorithm3Name": "Chọn bằng Deep Learning",
+  "algorithm3Desc": "Chọn số dựa trên quy luật do deep learning học được.",
+  "algorithm4Name": "Chọn theo quy luật",
+  "algorithm4Desc": "Phân tích quy luật thống kê như tỷ lệ chẵn/lẻ, số liên tiếp.",
+  "algorithm5Name": "Chọn có trọng số",
+  "algorithm5Desc": "Áp trọng số cho tần suất, độ gần, vùng, đa dạng để chọn số.",
+  "algorithm6Name": "Chọn theo tần suất",
+  "algorithm6Desc": "Ưu tiên số có tần suất quay cao.",
+  "algorithm7Name": "Số nóng/lạnh",
+  "algorithm7Desc": "Kết hợp số nóng (ra gần đây) và số lạnh (lâu không ra).",
+  "algorithm8Name": "Chọn bằng AI",
+  "algorithm8Desc": "AI phân tích số trúng thưởng trước đây và đề xuất số.",
+  
+  "free": "Miễn phí",
+  "coinsPerSet": "{coins} xu",
+  "@coinsPerSet": {
+    "placeholders": {
+      "coins": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "generatedNumbers": "Số đã tạo",
+  "generationResult": "Kết quả tạo",
+  "generatedCount": "Đã tạo tổng {count} bộ",
+  "@generatedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setsGenerated": "Đã tạo {count} bộ",
+  "@setsGenerated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setNumber": "Bộ {number}",
+  "@setNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "saveToMyNumbers": "Lưu vào Số của tôi",
+  "saveAsMyNumbers": "Lưu thành Số của tôi",
+  "saveSetsMessage": "Sẽ lưu {count} bộ số",
+  "@saveSetsMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "numbersSaved": "Đã lưu {count} bộ số",
+  "@numbersSaved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveFailed": "Lưu thất bại: {error}",
+  "@saveFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "memoOptional": "Ghi chú (tùy chọn)",
+  "memoExample": "VD: Số mua hàng tuần",
+  "share": "Chia sẻ",
+  "generateAgain": "Tạo lại",
+  "backToHome": "Về trang chủ",
+  
+  "maxLimitTitle": "Giới hạn số bộ",
+  "maxLimitMessage": "Chỉ được tạo tối đa 100 bộ.",
+  "requirementTitle": "Cần nhập",
+  "requirementSelectAlgorithm": "Vui lòng chọn thuật toán.",
+  "requirementSelectCount": "Vui lòng chọn hoặc nhập số bộ. (1~100)",
+  "requirementSelectBoth": "Vui lòng chọn thuật toán và nhập số bộ.",
+  
+  "errorLoadAlgorithms": "Không tải được thuật toán",
+  "errorLoadingData": "Không tải được dữ liệu",
+  "errorFormat": "Lỗi: {error}",
+  "@errorFormat": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorOccurred": "Đã xảy ra lỗi",
+  "initializationError": "Lỗi khởi tạo",
+  "errorGenerateFailed": "Tạo số thất bại: {message}",
+  "@errorGenerateFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNetwork": "Vui lòng kiểm tra kết nối mạng",
+  "errorServer": "Đã xảy ra lỗi máy chủ",
+  "errorUnknown": "Đã xảy ra lỗi không xác định",
+  
+  "language": "Ngôn ngữ",
+  "gameLabel": "Trò chơi",
+  "selectGame": "Chọn trò chơi",
+  "gameLotto645": "Lotto 6/45",
+  "gamePowerball": "Powerball",
+  "gameMegaMillions": "Mega Millions",
+  "gameWinForLife": "Win for Life",
+  "gameAnnuity720": "Xổ số hưu trí 720+",
+  "@gameAnnuity720": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "annuity720GroupBadge": "Group {group}",
+  "@annuity720GroupBadge": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" }
+    }
+  },
+  "annuity720FullFormat": "Group {group}: {digits}",
+  "@annuity720FullFormat": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" },
+      "digits": { "type": "String" }
+    }
+  },
+  "serialFixedGroupLabel": "Fix Group",
+  "@serialFixedGroupLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialFixedGroupHint": "1–5, blank = random",
+  "@serialFixedGroupHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsLabel": "Exclude Groups",
+  "@serialExcludeGroupsLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsHint": "1–5, up to 4",
+  "@serialExcludeGroupsHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialGroupRange": "Group range: 1–5",
+  "@serialGroupRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialDigitRange": "Each digit: 0–9",
+  "@serialDigitRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "bonusBallLabel": "Bi bonus",
+  "@bonusBallLabel": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNamePowerball": "Powerball (bi đỏ)",
+  "@bonusBallNamePowerball": {
+    "description": "MT(미검수)"
+  },
+  "gameTypeChangedClearNumbers": "Đã đổi trò chơi. Các số bao gồm và loại trừ đã được đặt lại.",
+  "@gameTypeChangedClearNumbers": {
+    "description": "MT(미검수)"
+  },
+  "selectLanguage": "Chọn ngôn ngữ",
+  "languageChanged": "Đã đổi sang {language}",
+  "@languageChanged": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageKorean": "한국어",
+  "languageEnglish": "English",
+  "languageChinese": "中文",
+  "languageVietnamese": "Tiếng Việt",
+  "languageThai": "ภาษาไทย",
+  "languageJapanese": "日本語",
+  "appNameOffline": "PickWizard: Trợ lý chọn số xổ số",
+  "includeNumbersLabel": "Số cần bao gồm",
+  "excludeNumbersLabel": "Số cần loại trừ",
+  "includeNumbersHint": "VD: 1, 3, 7 (phân cách bằng dấu phẩy hoặc khoảng trắng, tối đa 6)",
+  "mainNumberRange": "Dải số chính: {min}~{max}",
+  "@mainNumberRange": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "includeNumbersHintDynamic": "VD: 1, 3, 7 (phẩy hoặc cách trắng, dải {min}~{max}, tối đa {maxCount})",
+  "@includeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxCount": { "type": "int" }
+    }
+  },
+  "excludeNumbersHintDynamic": "VD: 2, 5, 10 (phẩy hoặc cách trắng, dải {min}~{max}, tối đa {maxExclude})",
+  "@excludeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxExclude": { "type": "int" }
+    }
+  },
+  "excludeNumbersHint": "VD: 2, 5, 10 (phân cách bằng dấu phẩy hoặc khoảng trắng, tối đa 39)",
+  "mainNumbers": "Số chính",
+  "@mainNumbers": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallSection": "Bi bonus ({name})",
+  "@bonusBallSection": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusNumbersLabel": "Số {name} cần bao gồm",
+  "@includeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "excludeBonusNumbersLabel": "Số {name} cần loại trừ",
+  "@excludeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusHint": "1~{max}, tối đa 1",
+  "@includeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "excludeBonusHint": "1~{max}, tối đa {limit}",
+  "@excludeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": {
+      "max": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "bonusBallNameMegaBall": "Mega Ball (bi vàng)",
+  "@bonusBallNameMegaBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNameLuckyBall": "Lucky Ball (bi vàng chanh)",
+  "@bonusBallNameLuckyBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusNumberRange": "Dải số bonus: 1~{max}",
+  "@bonusNumberRange": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "filterAll": "Tất cả",
+  "@filterAll": {
+    "description": "MT(미검수)"
+  },
+  "numberOfSetsHint": "Số bộ số cần tạo (1~100)",
+  "checkIncludeExclude": "Vui lòng kiểm tra điều kiện bao gồm/loại trừ.",
+  "copySetsCopied": "Đã sao chép bộ {start}~{end} vào clipboard.",
+  "@copySetsCopied": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "copyBy5SetsSection": "Sao chép theo 5 bộ",
+  "copySetsRangeButton": "Sao chép bộ {start}~{end}",
+  "@copySetsRangeButton": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "algorithm9NameDisplay": "Rút 10.000 lần chọn 6 số",
+  "algorithm9Desc": "Rút ngẫu nhiên 10.000 lần, chọn 6 số có tần suất cao nhất làm một bộ.",
+  "algorithm9DescDynamic": "Rút ngẫu nhiên 10.000 lần, chọn {count} số có tần suất cao nhất làm một bộ.",
+  "@algorithm9DescDynamic": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm1HelpOverview": "Tạo số hoàn toàn ngẫu nhiên. Mỗi số có xác suất được chọn như nhau.",
+  "algorithm1HelpHowItWorks": "Chọn 6 số ngẫu nhiên từ 1 đến 45. Không xét thống kê hay quy luật; mỗi số được chọn độc lập.",
+  "algorithm1HelpWhenToUse": "Dùng khi bạn muốn hoàn toàn dựa vào may mắn, không chiến lược đặc biệt. Miễn phí và tạo số nhanh nhất.",
+  "algorithm9HelpOverview": "Rút ngẫu nhiên từ 1 đến 45 tổng cộng 10.000 lần, lấy 6 số xuất hiện nhiều nhất làm một bộ. Cách mô phỏng thuần, không dùng dữ liệu quá khứ.",
+  "algorithm9HelpHowItWorks": "1. Lặp 10.000 lần: rút ngẫu nhiên một số từ 1 đến 45.\n2. Đếm số lần mỗi số xuất hiện.\n3. Chọn 6 số xuất hiện nhiều nhất làm một bộ.\n4. Nếu bằng nhau thì ưu tiên số nhỏ hơn.",
+  "algorithm9HelpWhenToUse": "Dùng khi bạn tin vào kết quả mô phỏng ngẫu nhiên lặp lại thay vì thống kê hay dữ liệu quá khứ. Miễn phí, không cần cài đặt thêm.",
+  "serialAlgorithm1Name": "Chọn số sê-ri ngẫu nhiên",
+  "serialAlgorithm1HelpHowItWorks": "Với mỗi trong sáu vị trí, rút ngẫu nhiên một chữ số từ 0 đến 9. Không dùng thống kê hay mẫu, mỗi vị trí được chọn độc lập.",
+  "serialAlgorithm9Name": "Mỗi chữ số: 3.000 lần, chọn tần suất cao nhất",
+  "serialAlgorithm9Desc": "Với mỗi trong sáu vị trí, rút ngẫu nhiên 0–9 trong 3.000 lần rồi chọn chữ số xuất hiện nhiều nhất ở vị trí đó.",
+  "serialAlgorithm9HelpOverview": "Với mỗi vị trí của Annuity 720+, rút ngẫu nhiên 0–9 trong 3.000 lần và chọn chữ số có tần suất cao nhất tại vị trí đó. Mô phỏng thuần túy, không dùng dữ liệu quay thưởng trong quá khứ.",
+  "serialAlgorithm9HelpHowItWorks": "1. Với mỗi trong sáu vị trí (trái sang phải), thực hiện các bước sau.\n2. Lặp 3.000 lần: chọn ngẫu nhiên một chữ số từ 0 đến 9.\n3. Đếm số lần xuất hiện và chọn chữ số có số lần cao nhất tại vị trí đó.\n4. Nếu hòa, ưu tiên chữ số nhỏ hơn.\n5. Sau khi đủ sáu vị trí, hoàn thành một bộ.",
+  "serialAlgorithm9HelpWhenToUse": "Dùng khi muốn cách chọn theo tần suất tương tự Monte Carlo kiểu chọn bóng, nhưng vẫn giữ ý nghĩa thứ tự các chữ số kiểu serial.",
+  "unsupportedAlgorithm": "Thuật toán không được hỗ trợ.",
+  "includeSelectedLabel": "Đã chọn {count} (tối đa {max})",
+  "@includeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "excludeSelectedLabel": "Đã chọn {count} (tối đa {max})",
+  "@excludeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "myNumbersEmptyTitle": "Chưa có số đã lưu",
+  "myNumbersEmptyHint": "Tạo số xong, nhấn 'Lưu thành Số của tôi' ở màn hình kết quả để lưu vào đây.",
+  "dbResetDialogTitle": "Thông báo",
+  "dbResetDialogMessage": "Các số đã lưu đã được xóa do cập nhật ứng dụng."
+}

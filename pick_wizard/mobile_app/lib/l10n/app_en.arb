@@ -1,0 +1,366 @@
+{
+  "@@locale": "en",
+  "@@context": "PickWizard - English Language Pack",
+  
+  "appTitle": "PickWizard: Lottery Picks",
+  "appSubtitle": "Lottery number picks helper app",
+  
+  "disclaimerDialogTitle": "Notice",
+  "disclaimerDialogMessage": "This app is a number-draw helper for those who wish to choose lottery numbers by a method other than the terminal’s quick pick when purchasing tickets. It does not increase your chances of winning. Please use it for entertainment only.",
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "close": "Close",
+  "save": "Save",
+  "delete": "Delete",
+  "deleteSavedNumberTitle": "Delete saved numbers",
+  "deleteSavedNumberMessage": "Delete this saved set?",
+  "offlineDrawCheckHint": "Check winning numbers at the official lottery.",
+  "edit": "Edit",
+  "view": "View",
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success",
+  "warning": "Warning",
+  "info": "Info",
+  
+  "home": "Home",
+  "homeTitle": "Lotto Number Generation",
+  "generate": "Generate",
+  "generateNumbers": "Generate Numbers",
+  "history": "History",
+  "myNumbers": "My Numbers",
+  "settings": "Settings",
+  "statistics": "Statistics",
+  "statisticsComingSoon": "Statistics feature is coming soon",
+  
+  "latestDraw": "Latest Draw",
+  "latestWinningNumbers": "Latest Winning Numbers",
+  "drawNumber": "Draw #{number}",
+  "@drawNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "bonusNumber": "Bonus",
+  "drawDate": "Draw Date",
+  
+  "selectAlgorithm": "Select Algorithm",
+  "algorithmSelection": "Algorithm Selection",
+  "changeOptions": "Change options",
+  "numberOfSets": "Number of Sets",
+  "numberOfSetsCount": "{count} sets",
+  "@numberOfSetsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quickButton5": "5 Sets",
+  "quickButton10": "10 Sets",
+  "fiveSets": "5 Sets",
+  "tenSets": "10 Sets",
+  "directInput": "Custom",
+  "enterNumberOfSets": "Enter number of sets",
+  "range1To100": "1~100",
+  "rangeHint": "1~100",
+  "setsUnit": "sets",
+  "generateButton": "Generate Numbers",
+  "generating": "Generating...",
+  
+  "algorithm1Name": "Quick Pick",
+  "algorithm1Desc": "Randomly select 6 numbers from 1-45. The most fair and unbiased method.",
+  "algorithm1DescDynamic": "Randomly select {count} numbers from {min}–{max}. The most fair and unbiased method.",
+  "@algorithm1DescDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  
+  "algorithm2Name": "Frequency-Based Selection (Advanced)",
+  "algorithm2Desc": "Analyze past draw frequency to select numbers.",
+  
+  "algorithm3Name": "Deep Learning Selection",
+  "algorithm3Desc": "Select numbers based on patterns learned by deep learning.",
+  
+  "algorithm4Name": "Pattern-Based Selection",
+  "algorithm4Desc": "Analyze statistical patterns like odd/even ratio, consecutive numbers, and range distribution.",
+  
+  "algorithm5Name": "Weighted Selection",
+  "algorithm5Desc": "Apply weights to frequency, recency, zone, and diversity to select numbers.",
+  
+  "algorithm6Name": "Frequency-Based Selection",
+  "algorithm6Desc": "Prioritize numbers with high draw frequency.",
+  
+  "algorithm7Name": "Hot & Cold Selection",
+  "algorithm7Desc": "Combine Hot numbers (recently drawn) and Cold numbers (not drawn for a while).",
+  
+  "algorithm8Name": "AI Selection",
+  "algorithm8Desc": "AI analyzes past winning numbers and recommends numbers.",
+  
+  "free": "FREE",
+  "coinsPerSet": "{coins} coins",
+  "@coinsPerSet": {
+    "placeholders": {
+      "coins": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "generatedNumbers": "Generated Numbers",
+  "generationResult": "Generation Result",
+  "generatedCount": "Total {count} sets generated",
+  "@generatedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setsGenerated": "{count} sets generated",
+  "@setsGenerated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setNumber": "Set {number}",
+  "@setNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "saveToMyNumbers": "Save to My Numbers",
+  "saveAsMyNumbers": "Save as My Numbers",
+  "saveSetsMessage": "Save {count} number sets",
+  "@saveSetsMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "numbersSaved": "{count} numbers saved successfully",
+  "@numbersSaved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveFailed": "Save failed: {error}",
+  "@saveFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "memoOptional": "Memo (Optional)",
+  "memoExample": "e.g., Weekly lottery numbers",
+  "share": "Share",
+  "generateAgain": "Generate Again",
+  "backToHome": "Back to Home",
+  
+  "maxLimitTitle": "Generation Limit",
+  "maxLimitMessage": "Maximum 100 sets can be generated.",
+  "requirementTitle": "Input Required",
+  "requirementSelectAlgorithm": "Please select an algorithm.",
+  "requirementSelectCount": "Please select or enter the number of sets. (1~100)",
+  "requirementSelectBoth": "Please select an algorithm and enter the number of sets.",
+  
+  "errorLoadAlgorithms": "Failed to load algorithms",
+  "errorLoadingData": "Failed to load data",
+  "errorFormat": "Error: {error}",
+  "@errorFormat": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorOccurred": "Error occurred",
+  "initializationError": "Initialization error",
+  "errorGenerateFailed": "Generation failed: {message}",
+  "@errorGenerateFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNetwork": "Please check your network connection",
+  "errorServer": "Server error occurred",
+  "errorUnknown": "An unknown error occurred",
+  
+  "language": "Language",
+  "gameLabel": "Game",
+  "selectGame": "Select Game",
+  "gameLotto645": "Lotto 6/45",
+  "gamePowerball": "Powerball",
+  "gameMegaMillions": "Mega Millions",
+  "gameWinForLife": "Win for Life",
+  "gameAnnuity720": "Annuity 720+",
+  "annuity720GroupBadge": "Group {group}",
+  "@annuity720GroupBadge": {
+    "placeholders": {
+      "group": { "type": "int" }
+    }
+  },
+  "annuity720FullFormat": "Group {group}: {digits}",
+  "@annuity720FullFormat": {
+    "placeholders": {
+      "group": { "type": "int" },
+      "digits": { "type": "String" }
+    }
+  },
+  "serialFixedGroupLabel": "Fix Group",
+  "serialFixedGroupHint": "1–5, blank = random",
+  "serialExcludeGroupsLabel": "Exclude Groups",
+  "serialExcludeGroupsHint": "1–5, up to 4",
+  "serialGroupRange": "Group range: 1–5",
+  "serialDigitRange": "Each digit: 0–9",
+  "bonusBallLabel": "Bonus Ball",
+  "bonusBallNamePowerball": "Powerball (Red)",
+  "gameTypeChangedClearNumbers": "Game changed. Include/exclude numbers reset.",
+  "selectLanguage": "Select Language",
+  "languageChanged": "Language changed to {language}",
+  "@languageChanged": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageKorean": "한국어",
+  "languageEnglish": "English",
+  "languageChinese": "中文",
+  "languageVietnamese": "Tiếng Việt",
+  "languageThai": "ภาษาไทย",
+  "languageJapanese": "日本語",
+
+  "appNameOffline": "PickWizard: Lottery Picks",
+  "includeNumbersLabel": "Numbers to include",
+  "excludeNumbersLabel": "Numbers to exclude",
+  "includeNumbersHint": "e.g. 1, 3, 7 (comma or space separated, max 6)",
+  "mainNumberRange": "Main: {min}~{max}",
+  "@mainNumberRange": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "includeNumbersHintDynamic": "e.g. 1, 3, 7 (comma or space separated, range {min}~{max}, max {maxCount})",
+  "@includeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxCount": { "type": "int" }
+    }
+  },
+  "excludeNumbersHintDynamic": "e.g. 2, 5, 10 (comma or space separated, range {min}~{max}, max {maxExclude})",
+  "@excludeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxExclude": { "type": "int" }
+    }
+  },
+  "excludeNumbersHint": "e.g. 2, 5, 10 (comma or space separated, max 39)",
+  "mainNumbers": "Main Numbers",
+  "bonusBallSection": "Bonus Ball ({name})",
+  "@bonusBallSection": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusNumbersLabel": "Include {name} Number",
+  "@includeBonusNumbersLabel": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "excludeBonusNumbersLabel": "Exclude {name} Numbers",
+  "@excludeBonusNumbersLabel": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusHint": "1~{max}, up to 1",
+  "@includeBonusHint": {
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "excludeBonusHint": "1~{max}, up to {limit}",
+  "@excludeBonusHint": {
+    "placeholders": {
+      "max": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "bonusBallNameMegaBall": "Mega Ball (Gold)",
+  "bonusBallNameLuckyBall": "Lucky Ball (Yellow)",
+  "bonusNumberRange": "Bonus: 1~{max}",
+  "@bonusNumberRange": {
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "filterAll": "All",
+  "numberOfSetsHint": "Number of sets to generate (1–100)",
+  "checkIncludeExclude": "Please check include/exclude settings.",
+  "copySetsCopied": "Sets {start}–{end} copied to clipboard.",
+  "@copySetsCopied": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "copyBy5SetsSection": "Copy in sets of 5",
+  "copySetsRangeButton": "Copy sets {start}–{end}",
+  "@copySetsRangeButton": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "algorithm9NameDisplay": "10K Draw Top 6",
+  "algorithm9Desc": "Pick one number 10,000 times at random, then take the 6 most frequent as one set.",
+  "algorithm9DescDynamic": "Pick one number 10,000 times at random, then take the {count} most frequent as one set.",
+  "@algorithm9DescDynamic": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm1HelpOverview": "Generates numbers completely at random. Every number has the same probability of being selected.",
+  "algorithm1HelpHowItWorks": "Selects 6 numbers at random from 1 to 45. It does not consider statistics or patterns; each number is chosen independently.",
+  "algorithm1HelpWhenToUse": "Use when you want to rely purely on luck with no particular strategy. It's free and generates numbers the fastest.",
+  "algorithm9HelpOverview": "Draws from 1 to 45 at random 10,000 times and uses the 6 most frequent numbers as one set. Pure simulation with no past data.",
+  "algorithm9HelpHowItWorks": "1. Repeat 10,000 times: pick one number at random from 1 to 45.\n2. Count how often each number appears.\n3. Select the 6 numbers that appeared most often as one set.\n4. If tied, the smaller number comes first.",
+  "algorithm9HelpWhenToUse": "Use when you trust repeated random simulation rather than statistics or past data. Free with no extra settings.",
+  "serialAlgorithm1Name": "Serial Quick Pick",
+  "serialAlgorithm1HelpHowItWorks": "For each of the six digit positions, draws one digit at random from 0 to 9. No statistics or patterns are used; each position is chosen independently.",
+  "serialAlgorithm9Name": "Per-Digit 3K Top Pick",
+  "serialAlgorithm9Desc": "For each of the six digit positions, draws 0–9 at random 3,000 times and picks the most frequent digit per position.",
+  "serialAlgorithm9HelpOverview": "For each position in Annuity 720+, draws 0–9 at random 3,000 times and selects the most frequent digit for that position. Pure simulation with no historical draw data.",
+  "serialAlgorithm9HelpHowItWorks": "1. For each of the six positions (left to right), do the following.\n2. Repeat 3,000 times: pick one digit at random from 0 to 9.\n3. Count occurrences and choose the digit with the highest count for that position.\n4. If tied, prefer the smaller digit.\n5. After filling all six positions, one set is complete.",
+  "serialAlgorithm9HelpWhenToUse": "Use when you want frequency-style picks similar to ball-pick Monte Carlo, while keeping serial digit order meaningful.",
+  "unsupportedAlgorithm": "Unsupported algorithm.",
+  "includeSelectedLabel": "{count} selected (max {max})",
+  "@includeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "excludeSelectedLabel": "{count} selected (max {max})",
+  "@excludeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "myNumbersEmptyTitle": "No saved numbers",
+  "myNumbersEmptyHint": "Generate numbers, then tap 'Save as My Numbers' on the result screen to save them here.",
+  "dbResetDialogTitle": "Notice",
+  "dbResetDialogMessage": "Saved numbers were cleared due to an app update."
+}

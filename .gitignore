@@ -1,0 +1,51 @@
+# Local recovery evidence and private development conversations
+/.recovery/
+/z_Cursor_Backups/
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+!.env.template
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+key.properties
+*KeystorePW*
+*service-account*.json
+
+# Dependencies, generated builds, caches and machine settings
+venv/
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.dart_tool/
+.gradle/
+.kotlin/
+build/
+dist/
+.idea/
+.vscode/
+.cursor/
+*.iml
+local.properties
+.flutter-plugins
+.flutter-plugins-dependencies
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Local datasets, model checkpoints and experiment outputs
+*.db
+*.sqlite
+*.sqlite3
+*.pt
+*.pth
+*.pkl
+*.apk
+*.aab

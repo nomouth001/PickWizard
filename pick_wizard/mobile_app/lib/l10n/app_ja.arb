@@ -1,0 +1,386 @@
+{
+  "@@locale": "ja",
+  "@@context": "PickWizard - Japanese Language Pack",
+
+  "appTitle": "PickWizard：宝くじ番号ナビ",
+  "appSubtitle": "宝くじ番号の補助アプリ",
+
+  "disclaimerDialogTitle": "ご利用案内",
+  "disclaimerDialogMessage": "本アプリは、ロト購入時に販売機のクイックピック以外の方法で番号を選びたい方のための番号抽選補助ツールです。当選確率を高めるものではありません。娯楽目的でご利用ください。",
+
+  "confirm": "確認",
+  "cancel": "キャンセル",
+  "close": "閉じる",
+  "save": "保存",
+  "delete": "削除",
+  "deleteSavedNumberTitle": "保存番号を削除",
+  "deleteSavedNumberMessage": "この保存を削除しますか？",
+  "offlineDrawCheckHint": "当選確認は公式サイトで行ってください。",
+  "edit": "編集",
+  "view": "表示",
+  "loading": "読み込み中...",
+  "error": "エラー",
+  "success": "成功",
+  "warning": "警告",
+  "info": "情報",
+
+  "home": "ホーム",
+  "homeTitle": "ロト番号生成",
+  "generate": "生成",
+  "generateNumbers": "番号を生成",
+  "history": "履歴",
+  "myNumbers": "マイ番号",
+  "settings": "設定",
+  "statistics": "統計",
+  "statisticsComingSoon": "統計機能は準備中です",
+
+  "latestDraw": "最新回",
+  "latestWinningNumbers": "最新当選番号",
+  "drawNumber": "第{number}回",
+  "@drawNumber": {
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "bonusNumber": "ボーナス",
+  "drawDate": "抽選日",
+
+  "selectAlgorithm": "アルゴリズム選択",
+  "algorithmSelection": "アルゴリズム選択",
+  "changeOptions": "オプション変更",
+  "numberOfSets": "生成数",
+  "numberOfSetsCount": "{count}セット",
+  "@numberOfSetsCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "quickButton5": "5セット",
+  "quickButton10": "10セット",
+  "fiveSets": "5セット",
+  "tenSets": "10セット",
+  "directInput": "直接入力",
+  "enterNumberOfSets": "生成数を入力",
+  "range1To100": "1〜100",
+  "rangeHint": "1〜100",
+  "setsUnit": "セット",
+  "generateButton": "番号生成",
+  "generating": "生成中...",
+
+  "algorithm1Name": "クイックピック",
+  "algorithm1Desc": "1〜45から6個を完全ランダムに選択します。公平で偏りのない方法です。",
+  "algorithm1DescDynamic": "{min}〜{max}から{count}個を完全ランダムに選択します。公平で偏りのない方法です。",
+  "@algorithm1DescDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm2Name": "頻度分析（上級）",
+  "algorithm2Desc": "過去の出現頻度を分析して番号を選択します。",
+  "algorithm3Name": "ディープラーニング",
+  "algorithm3Desc": "ディープラーニングが学習したパターンに基づき番号を選択します。",
+  "algorithm4Name": "パターン分析",
+  "algorithm4Desc": "奇数/偶数比、連番、区間分布などの統計的パターンを分析します。",
+  "algorithm5Name": "加重選択",
+  "algorithm5Desc": "頻度・新しさ・ゾーン・多様性に重みを付けて番号を選択します。",
+  "algorithm6Name": "頻度ベース",
+  "algorithm6Desc": "出現頻度の高い番号を優先して選択します。",
+  "algorithm7Name": "ホット/コールド",
+  "algorithm7Desc": "最近よく出るホット番号と久しく出ていないコールド番号を組み合わせます。",
+  "algorithm8Name": "AI選択",
+  "algorithm8Desc": "AIが過去の当選番号を分析して番号を推薦します。",
+
+  "free": "無料",
+  "coinsPerSet": "{coins}コイン",
+  "@coinsPerSet": {
+    "placeholders": {
+      "coins": { "type": "int" }
+    }
+  },
+
+  "generatedNumbers": "生成された番号",
+  "generationResult": "生成結果",
+  "generatedCount": "合計{count}セット生成",
+  "@generatedCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "setsGenerated": "{count}セット生成完了",
+  "@setsGenerated": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "setNumber": "セット{number}",
+  "@setNumber": {
+    "placeholders": {
+      "number": { "type": "int" }
+    }
+  },
+  "saveToMyNumbers": "マイ番号に保存",
+  "saveAsMyNumbers": "マイ番号として保存",
+  "saveSetsMessage": "{count}セットを保存します",
+  "@saveSetsMessage": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "numbersSaved": "{count}セットを保存しました",
+  "@numbersSaved": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "saveFailed": "保存失敗: {error}",
+  "@saveFailed": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "memoOptional": "メモ（任意）",
+  "memoExample": "例：毎週購入する番号",
+  "share": "共有",
+  "generateAgain": "再生成",
+  "backToHome": "ホームへ",
+
+  "maxLimitTitle": "生成数制限",
+  "maxLimitMessage": "最大100セットまで生成できます。",
+  "requirementTitle": "入力確認",
+  "requirementSelectAlgorithm": "アルゴリズムを選択してください。",
+  "requirementSelectCount": "生成数を選択または入力してください。（1〜100）",
+  "requirementSelectBoth": "アルゴリズムを選択し、生成数を入力してください。",
+
+  "errorLoadAlgorithms": "アルゴリズムを読み込めません",
+  "errorLoadingData": "データを読み込めません",
+  "errorFormat": "エラー: {error}",
+  "@errorFormat": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "errorOccurred": "エラーが発生しました",
+  "initializationError": "初期化エラー",
+  "errorGenerateFailed": "番号生成失敗: {message}",
+  "@errorGenerateFailed": {
+    "placeholders": {
+      "message": { "type": "String" }
+    }
+  },
+  "errorNetwork": "ネットワーク接続を確認してください",
+  "errorServer": "サーバーエラーが発生しました",
+  "errorUnknown": "不明なエラーが発生しました",
+
+  "language": "言語",
+  "gameLabel": "ゲーム",
+  "selectGame": "ゲーム選択",
+  "gameLotto645": "ロト 6/45",
+  "gamePowerball": "パワーボール",
+  "gameMegaMillions": "メガミリオンズ",
+  "gameWinForLife": "Win for Life",
+  "gameAnnuity720": "年金くじ720+",
+  "@gameAnnuity720": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "annuity720GroupBadge": "Group {group}",
+  "@annuity720GroupBadge": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" }
+    }
+  },
+  "annuity720FullFormat": "Group {group}: {digits}",
+  "@annuity720FullFormat": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" },
+      "digits": { "type": "String" }
+    }
+  },
+  "serialFixedGroupLabel": "Fix Group",
+  "@serialFixedGroupLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialFixedGroupHint": "1–5, blank = random",
+  "@serialFixedGroupHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsLabel": "Exclude Groups",
+  "@serialExcludeGroupsLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsHint": "1–5, up to 4",
+  "@serialExcludeGroupsHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialGroupRange": "Group range: 1–5",
+  "@serialGroupRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialDigitRange": "Each digit: 0–9",
+  "@serialDigitRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "bonusBallLabel": "ボーナスボール",
+  "@bonusBallLabel": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNamePowerball": "パワーボール（赤球）",
+  "@bonusBallNamePowerball": {
+    "description": "MT(미검수)"
+  },
+  "gameTypeChangedClearNumbers": "ゲームを変更したため、含める／除外する番号がリセットされました。",
+  "@gameTypeChangedClearNumbers": {
+    "description": "MT(미검수)"
+  },
+  "selectLanguage": "言語選択",
+  "languageChanged": "{language}に変更しました",
+  "@languageChanged": {
+    "placeholders": {
+      "language": { "type": "String" }
+    }
+  },
+  "languageKorean": "한국어",
+  "languageEnglish": "English",
+  "languageChinese": "中文",
+  "languageVietnamese": "Tiếng Việt",
+  "languageThai": "ภาษาไทย",
+  "languageJapanese": "日本語",
+
+  "appNameOffline": "PickWizard：宝くじ番号ナビ",
+  "includeNumbersLabel": "含める番号",
+  "excludeNumbersLabel": "除外する番号",
+  "includeNumbersHint": "例：1, 3, 7（カンマまたはスペース区切り、最大6個）",
+  "mainNumberRange": "メイン番号の範囲: {min}~{max}",
+  "@mainNumberRange": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "includeNumbersHintDynamic": "例：1, 3, 7（カンマまたはスペース区切り、範囲 {min}~{max}、最大 {maxCount} 個）",
+  "@includeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxCount": { "type": "int" }
+    }
+  },
+  "excludeNumbersHintDynamic": "例：2, 5, 10（カンマまたはスペース区切り、範囲 {min}~{max}、最大 {maxExclude} 個）",
+  "@excludeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxExclude": { "type": "int" }
+    }
+  },
+  "excludeNumbersHint": "例：2, 5, 10（カンマまたはスペース区切り、最大39個）",
+  "mainNumbers": "メイン番号",
+  "@mainNumbers": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallSection": "ボーナスボール（{name}）",
+  "@bonusBallSection": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusNumbersLabel": "含める{name}番号",
+  "@includeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "excludeBonusNumbersLabel": "除外する{name}番号",
+  "@excludeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusHint": "1~{max}、最大1個",
+  "@includeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "excludeBonusHint": "1~{max}、最大{limit}個",
+  "@excludeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": {
+      "max": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "bonusBallNameMegaBall": "メガボール（金球）",
+  "@bonusBallNameMegaBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNameLuckyBall": "ラッキーボール（黄球）",
+  "@bonusBallNameLuckyBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusNumberRange": "ボーナス番号の範囲: 1~{max}",
+  "@bonusNumberRange": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "filterAll": "すべて",
+  "@filterAll": {
+    "description": "MT(미검수)"
+  },
+  "numberOfSetsHint": "生成するセット数（1〜100）",
+  "checkIncludeExclude": "含める/除外する条件を確認してください。",
+  "copySetsCopied": "セット{start}〜{end}をクリップボードにコピーしました。",
+  "@copySetsCopied": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "copyBy5SetsSection": "5セット単位でコピー",
+  "copySetsRangeButton": "セット{start}〜{end}をコピー",
+  "@copySetsRangeButton": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "algorithm9NameDisplay": "1万回抽選トップ6",
+  "algorithm9Desc": "1〜45を1万回ランダムに抽選し、出現頻度の高い6個を1セットにします。",
+  "algorithm9DescDynamic": "1万回ランダムに抽選し、出現頻度の高い{count}個を1セットにします。",
+  "@algorithm9DescDynamic": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm1HelpOverview": "完全ランダムで番号を生成します。すべての番号が同じ確率で選ばれます。",
+  "algorithm1HelpHowItWorks": "1から45の数字からランダムに6個を選択します。統計やパターンは考慮せず、各番号は独立して選ばれます。",
+  "algorithm1HelpWhenToUse": "特別な戦略なしに運だけに任せたいときにご利用ください。無料で最も速く番号を生成できます。",
+  "algorithm9HelpOverview": "1〜45を1万回ランダムに抽選し、最も多く出た6個を1セットにします。過去データを使わない純粋なシミュレーション方式です。",
+  "algorithm9HelpHowItWorks": "1. 1から45のいずれか1つをランダムに抽選する試行を1万回繰り返します。\n2. 各番号の出現回数を数えて頻度を計算します。\n3. 最も多く出た6個の番号を1セットとして選択します。\n4. 同点の場合は番号の小さい方を優先します。",
+  "algorithm9HelpWhenToUse": "統計や過去データではなく、繰り返しランダムシミュレーションの結果を信じたいときにご利用ください。無料で追加設定はありません。",
+  "serialAlgorithm1Name": "シリアル自動選択",
+  "serialAlgorithm1HelpHowItWorks": "0〜9の数字の中から1つをランダムに選び、6桁を埋めます。統計やパターンは使用せず、各桁は独立して選択されます。",
+  "serialAlgorithm9Name": "桁ごと3千回最多桁",
+  "serialAlgorithm9Desc": "6桁それぞれで0〜9を3,000回ランダムに抽選し、桁ごとに最も多く出た数字を選びます。",
+  "serialAlgorithm9HelpOverview": "年金ロト720+の各桁について、0〜9を3,000回ランダムに抽選し、その桁で最も出現頻度が高い数字を選びます。過去の抽選データは使いません。",
+  "serialAlgorithm9HelpHowItWorks": "1. 左から6桁それぞれについて次を行います。\n2. 0〜9のいずれかをランダムに選ぶ試行を3,000回繰り返します。\n3. 各数字の出現回数を数え、その桁で最も多かった数字を採用します。\n4. 同点の場合はより小さい数字を優先します。\n5. 6桁すべて埋まったら1セット完成です。",
+  "serialAlgorithm9HelpWhenToUse": "ボールピックのアルゴリズム9のように頻度で選びたいが、年金シリアルのように桁の順序を保ちたいときにご利用ください。",
+  "unsupportedAlgorithm": "サポートされていないアルゴリズムです。",
+  "includeSelectedLabel": "{count}個選択（最大{max}個）",
+  "@includeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "excludeSelectedLabel": "{count}個選択（最大{max}個）",
+  "@excludeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "myNumbersEmptyTitle": "保存された番号はありません",
+  "myNumbersEmptyHint": "番号を生成したあと、結果画面で「マイ番号として保存」をタップするとここに保存されます。",
+  "dbResetDialogTitle": "お知らせ",
+  "dbResetDialogMessage": "アプリのアップデートにより、保存された番号がリセットされました。"
+}

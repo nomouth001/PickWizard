@@ -1,0 +1,408 @@
+{
+  "@@locale": "zh",
+  "@@context": "PickWizard - 中文语言包",
+  
+  "appTitle": "PickWizard：彩票选号助手",
+  "appSubtitle": "彩票选号辅助应用",
+  
+  "disclaimerDialogTitle": "使用说明",
+  "disclaimerDialogMessage": "本应用为希望在购彩时以销售机自动选号以外方式选择号码的用户提供号码抽取辅助功能。本应用不会提高中奖概率，仅供娱乐使用。",
+  "confirm": "确认",
+  "cancel": "取消",
+  "close": "关闭",
+  "save": "保存",
+  "delete": "删除",
+  "deleteSavedNumberTitle": "删除已保存的号码",
+  "deleteSavedNumberMessage": "确定要删除这条保存记录吗？",
+  "offlineDrawCheckHint": "请到官方渠道核对开奖结果。",
+  "edit": "编辑",
+  "view": "查看",
+  "loading": "加载中...",
+  "error": "错误",
+  "success": "成功",
+  "warning": "警告",
+  "info": "信息",
+  
+  "home": "首页",
+  "homeTitle": "彩票号码生成",
+  "generate": "生成",
+  "generateNumbers": "生成号码",
+  "history": "历史",
+  "myNumbers": "我的号码",
+  "settings": "设置",
+  "statistics": "统计",
+  "statisticsComingSoon": "统计功能即将推出",
+  
+  "latestDraw": "最新期号",
+  "latestWinningNumbers": "最新开奖号码",
+  "drawNumber": "第{number}期",
+  "@drawNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "bonusNumber": "特别号",
+  "drawDate": "开奖日",
+  
+  "selectAlgorithm": "选择算法",
+  "algorithmSelection": "选择算法",
+  "changeOptions": "更改选项",
+  "numberOfSets": "生成数量",
+  "numberOfSetsCount": "{count}组",
+  "@numberOfSetsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quickButton5": "5组",
+  "quickButton10": "10组",
+  "fiveSets": "5组",
+  "tenSets": "10组",
+  "directInput": "自定义",
+  "enterNumberOfSets": "请输入生成组数",
+  "range1To100": "1~100",
+  "rangeHint": "1~100",
+  "setsUnit": "组",
+  "generateButton": "生成号码",
+  "generating": "生成中...",
+  
+  "algorithm1Name": "随机选号 (Quick Pick)",
+  "algorithm1Desc": "从1~45中随机选择6个号码，公平无偏。",
+  "algorithm1DescDynamic": "从{min}~{max}中随机选择{count}个号码，公平无偏。",
+  "@algorithm1DescDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm2Name": "高级频率选号",
+  "algorithm2Desc": "根据历史出现频率分析选号。",
+  "algorithm3Name": "深度学习选号",
+  "algorithm3Desc": "基于深度学习习得的规律选号。",
+  "algorithm4Name": "规律分析选号",
+  "algorithm4Desc": "分析奇偶比、连号、区间分布等统计规律。",
+  "algorithm5Name": "加权组合选号",
+  "algorithm5Desc": "对频率、近期性、区间、多样性加权后选号。",
+  "algorithm6Name": "频率选号",
+  "algorithm6Desc": "优先选择出现频率高的号码。",
+  "algorithm7Name": "热号/冷号选号",
+  "algorithm7Desc": "组合近期常出的热号与久未出现的冷号。",
+  "algorithm8Name": "AI选择",
+  "algorithm8Desc": "AI分析历史开奖号码并推荐号码。",
+
+  "free": "免费",
+  "coinsPerSet": "{coins}币",
+  "@coinsPerSet": {
+    "placeholders": {
+      "coins": {
+        "type": "int"
+      }
+    }
+  },
+  
+  "generatedNumbers": "已生成号码",
+  "generationResult": "生成结果",
+  "generatedCount": "共生成{count}组",
+  "@generatedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setsGenerated": "已生成{count}组",
+  "@setsGenerated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "setNumber": "组{number}",
+  "@setNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "saveToMyNumbers": "保存到我的号码",
+  "saveAsMyNumbers": "保存为我的号码",
+  "saveSetsMessage": "将保存{count}组号码",
+  "@saveSetsMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "numbersSaved": "已保存{count}组号码",
+  "@numbersSaved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveFailed": "保存失败：{error}",
+  "@saveFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "memoOptional": "备注（选填）",
+  "memoExample": "例：每周购买的号码",
+  "share": "分享",
+  "generateAgain": "再次生成",
+  "backToHome": "返回首页",
+  
+  "maxLimitTitle": "生成数量限制",
+  "maxLimitMessage": "最多只能生成100组。",
+  "requirementTitle": "输入确认",
+  "requirementSelectAlgorithm": "请选择算法。",
+  "requirementSelectCount": "请选择或输入生成组数（1~100）。",
+  "requirementSelectBoth": "请选择算法并输入生成组数。",
+  
+  "errorLoadAlgorithms": "无法加载算法",
+  "errorLoadingData": "无法加载数据",
+  "errorFormat": "错误：{error}",
+  "@errorFormat": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorOccurred": "发生错误",
+  "initializationError": "初始化错误",
+  "errorGenerateFailed": "号码生成失败：{message}",
+  "@errorGenerateFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorNetwork": "请检查网络连接",
+  "errorServer": "服务器错误",
+  "errorUnknown": "发生未知错误",
+  
+  "language": "语言",
+  "gameLabel": "游戏",
+  "selectGame": "选择游戏",
+  "gameLotto645": "乐透 6/45",
+  "gamePowerball": "强力球",
+  "gameMegaMillions": "超级百万",
+  "gameWinForLife": "Win for Life",
+  "gameAnnuity720": "年金彩票720+",
+  "@gameAnnuity720": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "annuity720GroupBadge": "Group {group}",
+  "@annuity720GroupBadge": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" }
+    }
+  },
+  "annuity720FullFormat": "Group {group}: {digits}",
+  "@annuity720FullFormat": {
+    "description": "MT(미검수) - 검토 필요",
+    "placeholders": {
+      "group": { "type": "int" },
+      "digits": { "type": "String" }
+    }
+  },
+  "serialFixedGroupLabel": "Fix Group",
+  "@serialFixedGroupLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialFixedGroupHint": "1–5, blank = random",
+  "@serialFixedGroupHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsLabel": "Exclude Groups",
+  "@serialExcludeGroupsLabel": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialExcludeGroupsHint": "1–5, up to 4",
+  "@serialExcludeGroupsHint": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialGroupRange": "Group range: 1–5",
+  "@serialGroupRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "serialDigitRange": "Each digit: 0–9",
+  "@serialDigitRange": {
+    "description": "MT(미검수) - 검토 필요"
+  },
+  "bonusBallLabel": "奖金球",
+  "@bonusBallLabel": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNamePowerball": "强力球（红球）",
+  "@bonusBallNamePowerball": {
+    "description": "MT(미검수)"
+  },
+  "gameTypeChangedClearNumbers": "更换游戏后，包含与排除的号码已重置。",
+  "@gameTypeChangedClearNumbers": {
+    "description": "MT(미검수)"
+  },
+  "selectLanguage": "选择语言",
+  "languageChanged": "已切换为{language}",
+  "@languageChanged": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "languageKorean": "한국어",
+  "languageEnglish": "English",
+  "languageChinese": "中文",
+  "languageVietnamese": "Tiếng Việt",
+  "languageThai": "ภาษาไทย",
+  "languageJapanese": "日本語",
+  "appNameOffline": "PickWizard：彩票选号助手",
+  "includeNumbersLabel": "包含的号码",
+  "excludeNumbersLabel": "排除的号码",
+  "includeNumbersHint": "例：1, 3, 7（逗号或空格分隔，最多6个）",
+  "mainNumberRange": "主号码范围：{min}~{max}",
+  "@mainNumberRange": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "includeNumbersHintDynamic": "例：1, 3, 7（逗号或空格分隔，范围 {min}~{max}，最多 {maxCount} 个）",
+  "@includeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxCount": { "type": "int" }
+    }
+  },
+  "excludeNumbersHintDynamic": "例：2, 5, 10（逗号或空格分隔，范围 {min}~{max}，最多 {maxExclude} 个）",
+  "@excludeNumbersHintDynamic": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" },
+      "maxExclude": { "type": "int" }
+    }
+  },
+  "excludeNumbersHint": "例：2, 5, 10（逗号或空格分隔，最多39个）",
+  "mainNumbers": "主号码",
+  "@mainNumbers": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallSection": "奖金球（{name}）",
+  "@bonusBallSection": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusNumbersLabel": "要包含的{name}号码",
+  "@includeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "excludeBonusNumbersLabel": "要排除的{name}号码",
+  "@excludeBonusNumbersLabel": {
+    "description": "MT(미검수)",
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "includeBonusHint": "1~{max}，最多1个",
+  "@includeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "excludeBonusHint": "1~{max}，最多{limit}个",
+  "@excludeBonusHint": {
+    "description": "MT(미검수)",
+    "placeholders": {
+      "max": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "bonusBallNameMegaBall": "超级球（金球）",
+  "@bonusBallNameMegaBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusBallNameLuckyBall": "幸运球（黄球）",
+  "@bonusBallNameLuckyBall": {
+    "description": "MT(미검수)"
+  },
+  "bonusNumberRange": "奖金号码范围：1~{max}",
+  "@bonusNumberRange": {
+    "description": "MT(미검수)",
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "filterAll": "全部",
+  "@filterAll": {
+    "description": "MT(미검수)"
+  },
+  "numberOfSetsHint": "要生成的号码组数（1~100）",
+  "checkIncludeExclude": "请确认包含/排除条件。",
+  "copySetsCopied": "第{start}~{end}组已复制到剪贴板。",
+  "@copySetsCopied": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "copyBy5SetsSection": "按5组复制",
+  "copySetsRangeButton": "复制第{start}~{end}组",
+  "@copySetsRangeButton": {
+    "placeholders": {
+      "start": { "type": "int" },
+      "end": { "type": "int" }
+    }
+  },
+  "algorithm9NameDisplay": "万次抽取6个",
+  "algorithm9Desc": "随机抽取1万次后，将出现频率最高的6个号码作为一组。",
+  "algorithm9DescDynamic": "随机抽取1万次后，将出现频率最高的{count}个号码作为一组。",
+  "@algorithm9DescDynamic": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "algorithm1HelpOverview": "完全随机生成号码，每个号码被选中的概率相同。",
+  "algorithm1HelpHowItWorks": "从1到45中随机选择6个号码。不考虑统计或规律，每个号码独立选择。",
+  "algorithm1HelpWhenToUse": "当您不想用任何策略、纯粹凭运气时使用。免费且生成速度最快。",
+  "algorithm9HelpOverview": "从1~45中随机抽取1万次，将出现次数最多的6个号码作为一组。不使用历史数据的纯模拟方式。",
+  "algorithm9HelpHowItWorks": "1. 从1到45中随机抽取一个数字，重复10,000次。\n2. 统计每个号码出现的次数。\n3. 将出现次数最多的6个号码作为一组。\n4. 次数相同时，号码小的优先。",
+  "algorithm9HelpWhenToUse": "当您相信重复随机模拟结果而不依赖统计或历史数据时使用。免费且无需额外设置。",
+  "serialAlgorithm1Name": "串码自动选号",
+  "serialAlgorithm1HelpHowItWorks": "对6个位置各自从0~9中随机抽取一个数字，填满六位串码。不使用统计或规律，每位独立选择。",
+  "serialAlgorithm9Name": "每位三千次最高频",
+  "serialAlgorithm9Desc": "六个位置各自将0~9随机抽取3000次，每个位置取出现次数最多的数字。",
+  "serialAlgorithm9HelpOverview": "对年金720+的每一位，将0~9随机抽取3000次，在该位选取出现最频繁的数字。不使用历史开奖数据的纯模拟。",
+  "serialAlgorithm9HelpHowItWorks": "1. 对从左到右六个位置分别执行以下步骤。\n2. 重复3000次：从0~9中随机抽取一个数字。\n3. 统计各数字出现次数，在该位选取次数最多的数字。\n4. 若并列，优先较小的数字。\n5. 六位填满后即为一组。",
+  "serialAlgorithm9HelpWhenToUse": "希望在保持年金串码位序意义的前提下，采用类似球彩「万次抽取」的频率思路时使用。",
+  "unsupportedAlgorithm": "不支持该算法。",
+  "includeSelectedLabel": "已选{count}个（最多{max}个）",
+  "@includeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "excludeSelectedLabel": "已选{count}个（最多{max}个）",
+  "@excludeSelectedLabel": {
+    "placeholders": {
+      "count": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "myNumbersEmptyTitle": "暂无保存的号码",
+  "myNumbersEmptyHint": "生成号码后，在结果页面点击「保存为我的号码」即可保存到此。",
+  "dbResetDialogTitle": "通知",
+  "dbResetDialogMessage": "由于应用更新，已保存的号码被重置。"
+}

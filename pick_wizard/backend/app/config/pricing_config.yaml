@@ -1,0 +1,197 @@
+# 가격 정책 설정 파일 (Pricing Configuration)
+# 
+# 2026-01-08 03:30:00 EST - 초기 생성
+# 2026-01-08 06:00:00 EST - 알고리즘 2, 3, 4 가격 업데이트
+# 이 파일을 수정하여 전체 과금 모델 변경 가능
+#
+# 지원 모델:
+# - per_algorithm: 알고리즘별 고정가
+# - volume_discount: 세트 수별 할인
+# - subscription: 구독형
+# - event_pricing: 이벤트 가격
+
+# ============================================================================
+# 기본 정책 (Default Policy)
+# ============================================================================
+default_policy: "standard"
+
+# ============================================================================
+# 정책 목록 (Policy Profiles)
+# ============================================================================
+policies:
+  # --- 표준 정책 (현재 운영) ---
+  standard:
+    name: "표준 가격"
+    description: "알고리즘별 고정가 + 세트당 과금"
+    enabled: true
+    
+    # 알고리즘별 세트당 가격
+    # 2026-01-08 06:00:00 EST - 알고리즘 2, 3, 4 추가
+    # 2026-01-18 EST - 알고리즘 8 (AI Selection) 추가: 5→1 (5세트당 5코인)
+    algorithm_costs:
+      1: 0    # 순수 랜덤 (무료)
+      2: 1    # 고급 빈도 분석 (신규, 기본값)
+      3: 1    # LSTM 고급 분석 (신규, Non-Cumulative + Normal 기준)
+      4: 1    # 패턴 분석 (재설계, Range 기본)
+      5: 1    # 가중치 조합
+      6: 1    # 기본 빈도 분석
+      7: 1    # 핫/콜드
+      8: 1    # 인공지능 선택 (1세트당 1코인)
+      9: 0    # 몬테카를로 상위 6개 (038, 무료)
+    
+    # 주의: 알고리즘 2, 3, 4는 파라미터에 따라 동적 비용 계산
+    # 위 값은 기본값이며, calculate_cost() 메서드로 동적 계산됨
+    
+    # 세트 수별 할인 (선택)
+    volume_discount:
+      enabled: false
+      tiers:
+        - min_sets: 1
+          max_sets: 5
+          discount: 0.0    # 0% 할인
+        - min_sets: 6
+          max_sets: 10
+          discount: 0.0    # 0% 할인
+        - min_sets: 11
+          max_sets: null   # null = 무제한
+          discount: 0.0    # 0% 할인
+    
+    # 일일 무료 할당량 (선택)
+    daily_free_quota:
+      enabled: false
+      free_sets_per_day: 5
+      applies_to_algorithms: [1]  # 알고리즘 1번만
+  
+  # --- 프로모션 정책 (이벤트용) ---
+  promotion_2026_01:
+    name: "2026년 1월 신규 가입 이벤트"
+    description: "모든 알고리즘 50% 할인"
+    enabled: false
+    
+    algorithm_costs:
+      1: 0
+      2: 1    # 고급 빈도 분석 (50% 할인)
+      3: 2    # LSTM (50% 할인: 3코인 → 2코인)
+      4: 1    # 패턴 분석 (50% 할인)
+      5: 2    # 3코인 → 2코인 (반올림)
+      6: 1    # 1코인 (변동 없음)
+      7: 1    # 1코인 (변동 없음)
+    
+    volume_discount:
+      enabled: false
+    
+    daily_free_quota:
+      enabled: true
+      free_sets_per_day: 10
+      applies_to_algorithms: [1, 6, 7]
+  
+  # --- 구독형 정책 (미래용) ---
+  subscription:
+    name: "월 구독 플랜"
+    description: "월 정액으로 무제한 사용"
+    enabled: false
+    
+    # 구독 사용자는 모든 알고리즘 무료
+    algorithm_costs:
+      1: 0
+      2: 0
+      3: 0
+      4: 0
+      5: 0
+      6: 0
+      7: 0
+    
+    # 구독 요금 (별도 결제 시스템에서 처리)
+    subscription_plans:
+      - id: "basic"
+        name: "베이직"
+        monthly_price_krw: 3900
+        daily_generation_limit: 50
+      - id: "premium"
+        name: "프리미엄"
+        monthly_price_krw: 9900
+        daily_generation_limit: null  # 무제한
+  
+  # --- 개발 모드 (테스트용) ---
+  development:
+    name: "개발 모드 (무료)"
+    description: "개발 테스트용 - 모든 것이 무료"
+    enabled: false
+    
+    algorithm_costs:
+      1: 0
+      2: 0
+      3: 0
+      4: 0
+      5: 0
+      6: 0
+      7: 0
+    
+    volume_discount:
+      enabled: false
+    
+    daily_free_quota:
+      enabled: false
+
+# ============================================================================
+# 환경별 정책 매핑
+# ============================================================================
+environment_mapping:
+  development: "development"
+  staging: "standard"
+  production: "standard"
+
+# ============================================================================
+# 가격 계산 규칙
+# ============================================================================
+pricing_rules:
+  # 최소 청구 금액
+  minimum_charge: 0
+  
+  # 최대 1회 청구 금액
+  maximum_charge: 1000
+  
+  # 반올림 규칙 (up, down, nearest)
+  rounding: "nearest"
+  
+  # 무료 사용자 일일 한도
+  free_user_daily_limit:
+    enabled: true
+    max_generations_per_day: 20
+    max_free_algorithm_uses: 100
+
+# ============================================================================
+# 특별 이벤트 (기간 한정)
+# ============================================================================
+special_events:
+  - event_id: "new_year_2026"
+    name: "신년 이벤트"
+    enabled: false
+    start_date: "2026-01-01"
+    end_date: "2026-01-31"
+    discount_percent: 50
+    applies_to_algorithms: [3, 4, 5]
+    
+  - event_id: "weekend_special"
+    name: "주말 특가"
+    enabled: false
+    days_of_week: [5, 6]  # 토, 일 (0=월요일)
+    discount_percent: 30
+    applies_to_algorithms: [3, 4, 5, 6, 7]
+
+# ============================================================================
+# 메타 정보
+# ============================================================================
+version: "1.0.0"
+last_updated: "2026-01-08 03:30:00 EST"
+notes: |
+  이 파일을 수정하여 과금 정책을 유연하게 변경할 수 있습니다.
+  
+  주요 변경 시나리오:
+  1. 가격 조정: algorithm_costs 값만 변경
+  2. 할인 이벤트: promotion 정책 enabled=true
+  3. 구독 모델 전환: subscription 정책으로 변경
+  4. 무료 체험 확대: daily_free_quota 조정
+  
+  변경 후 서버 재시작 또는 hot-reload 필요
+

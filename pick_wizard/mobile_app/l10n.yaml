@@ -1,0 +1,9 @@
+# 다국어 설정 파일
+# 2026-01-16 EST - 플러그인 방식 다국어 인프라 구축
+
+arb-dir: lib/l10n
+template-arb-file: app_ko.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+nullable-getter: false
+output-dir: lib/core/localization/generated

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuckyAI Admin</title>
+  <!-- 2026-02-14 EST - 035 설계: Vue.js 3 + Tailwind CSS CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    // 035 설계: config → auth → api → router → pages → app 순차 로드
+    (function() {
+      var base = window.location.pathname.replace(/\/?index\.html?$/, '').replace(/\/?$/, '') || '';
+      var js = base + '/js/';
+      var load = function(src, next) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.onload = next || function() {};
+        s.onerror = function() { console.error('Failed to load:', src); };
+        document.head.appendChild(s);
+      };
+      load(js + 'config.js', function() {
+        load(js + 'auth.js', function() {
+          load(js + 'api.js', function() {
+            load(js + 'router.js', function() {
+              load(js + 'pages/Login.js', function() {
+                load(js + 'pages/Backtest.js', function() {
+                  load(js + 'app.js', function() {
+                    var app = window.AdminApp && window.AdminApp.createApp && window.AdminApp.createApp();
+                    if (app) app.mount('#app');
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
